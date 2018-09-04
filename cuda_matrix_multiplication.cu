@@ -8,7 +8,7 @@
 #include "common.h"
 
 using namespace std;
-#define SIZE 1000
+#define SIZE 4000
 
 void initialize_matrix(int *matrix, int n)
 {
@@ -64,7 +64,7 @@ int main(int argc, char const *argv[])
   cudaMemcpy(d_matrixB, matrixB, bytes, cudaMemcpyHostToDevice);
 
   // Kernel configuration
-  int dimx = 32;
+  int dimx = 512;
   dim3 block(dimx, 1);
   dim3 grid((n + block.x - 1) / block.x, n);
 
