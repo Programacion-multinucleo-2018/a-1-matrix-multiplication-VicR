@@ -13,9 +13,8 @@
 
 void initialize_matrix(int *matrix, int n)
 {
-  for (int i = 0; i < n*n; i++) {
+  for (int i = 0; i < n*n; i++)
     matrix[i] = i + 1;
-  }
 }
 
 // Matrix multiplication with OpenMP
